@@ -18,7 +18,7 @@ public class ToDoValidator implements Validator {
         ToDo toDo = (ToDo) obj;
         String priority = toDo.getPriority();
 
-        if(!"high".equals(priority) && !"low".equals(priority)){
+        if(!"high".equals(priority.trim())  && !"low".equals(priority.trim())){
             errors.rejectValue("priority", "Priority my be 'high' or 'low'!");
         }
     }
